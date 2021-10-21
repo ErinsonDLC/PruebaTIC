@@ -1,0 +1,36 @@
+﻿@model PruebaTIC.Models.Usuarios
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Inicie Sesión</h1>
+<link href="~/css/site.css" rel="stylesheet" />
+<hr />
+<div class="row" align="center">
+    <div class="col-md-4">
+        <form class="form-create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Usuario" class="control-label text-light"></label>
+                <input asp-for="Usuario" class="form-control" />
+                <span asp-validation-for="Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clave" class="control-label text-light"></label>
+                <input asp-for="Clave" type="password" class="form-control" />
+                <span asp-validation-for="Clave" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Iniciar Sesión" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="logo-image" align="center">
+        <img src="~/css/logo-institucion.png" width="500" height="500" />
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

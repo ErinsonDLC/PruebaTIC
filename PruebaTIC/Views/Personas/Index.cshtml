@@ -1,0 +1,77 @@
+﻿@model IEnumerable<PruebaTIC.Models.Personas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Personas</h1>
+
+<p style="font-size:1.2em;">
+    <a class="text-dark" asp-action="Create">►  Añadir personas</a><br />
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento).Replace("FechaNacimiento", "Fecha de Nacimiento")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pasaporte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pasaporte)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Foto)
+                    <div style="width: 50px; height:50px; border-radius:50%; border:1px solid #808080; margin:auto;"><img src="#" alt="Foto" /></div>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <!--<a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |-->
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    
+</table>
+<div>
+    <a class="back-list" asp-controller="Home" asp-action="Index">Volver a Inicio</a>
+</div>

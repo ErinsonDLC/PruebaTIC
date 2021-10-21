@@ -1,0 +1,70 @@
+﻿@model PruebaTIC.Models.Personas
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Añadir personas</h1>
+<link href="~/css/site.css" rel="stylesheet" />
+<hr />
+<div class="row" align="center">
+    <div class="col-md-4">
+        <form asp-action="Create" class="form-align" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label text-light"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label text-light"></label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label text-light">Fecha de Nacimiento</label>
+                <input asp-for="FechaNacimiento" type="date" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pasaporte" class="control-label text-light"></label>
+                <input asp-for="Pasaporte" class="form-control" />
+                <span asp-validation-for="Pasaporte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label text-light">Dirección</label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexo" class="control-label text-light"></label>
+                <select class="form-control">
+                    <option value="Maculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <span asp-validation-for="Sexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Foto" class="control-label text-light"></label>
+                <div class="selected-pic"><img src="#" alt="Profile pic" /></div>
+                <input asp-for="Foto" type="file" name="Foto" class="form-control" />
+                <span asp-validation-for="Foto" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input type="submit" value="Añadir persona" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="logo-image" align="center">
+        <img src="~/css/logo-institucion.png" width="500" height="500" />
+    </div>
+</div>
+<br />
+<div>
+    <a class="back-list" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

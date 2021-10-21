@@ -1,0 +1,187 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Estilos para formularios
+-------------------------------------------------- */
+.row{
+    margin: auto;
+    width: 100%;
+}
+
+.col-md-4 {
+    width: 100%;
+    border: solid 1px #80808050;
+    border-radius: 25px;
+    background: #003776;
+    padding: 20px 0 20px 0;
+    box-shadow: 3px 3px 5px #00000090;
+}
+
+
+.form-group input[type="submit"] {
+ border: 2px solid #e5e5e5;
+ background: #0094ff;
+}
+.form-group input, select option{
+    color: #e5e5e5;
+    width: 17em;
+    outline: none;
+    background: none;
+    border: none;
+    text-align: center;
+    margin: auto;
+    border-bottom: 1.5px solid #e5e5e570;
+}
+
+.form-group input:focus {
+    background:none;
+    color: #e5e5e5;
+    outline:none;
+}
+
+.form-align {
+    display: inline-block;
+    text-align: center;
+}
+
+.logo-image{
+    position: relative;
+    margin: auto;
+}
+
+.back-list {
+    background: #808080;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    color: #e5e5e5;
+    font-weight: bolder;
+    text-decoration: none;
+    box-shadow: 2px 1px 4px #00000090;
+    transition: all ease .3s;
+}
+.back-list:hover {
+    background: #fff;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    color: #808080;
+    text-decoration: none;
+    box-shadow: 2px 1px 4px #00000090;
+    font-weight: bolder;
+    transition: all ease .3s;
+}
+
+.selected-pic {
+    width: 150px;
+    height: 150px;
+    background: #80808050;
+    border: 3px solid #808080;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.control-label{
+    font-weight: bold;
+}
+
+.home-btn {
+    display: block;
+    background: #1b6ec2;
+    text-align: center;
+    color: #e5e5e5;
+    padding: 20px;
+    margin: auto;
+    text-decoration :none;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 90vh;
+    transition: all ease .3s;
+}
+
+.home-btn:hover {
+    display: block;
+    background: #e5e5e5;
+    text-align: center;
+    color: #1b6ec2;
+    padding: 20px;
+    margin: auto;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 90vh;
+    transition: all ease .3s;
+}
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+        font-size: 14px;
+    }
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
